@@ -1,0 +1,128 @@
+/*.grid{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}*/
+hgroup{
+  font-family: fantasy;
+  text-align: center;
+}
+.title{
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.title a{
+  text-decoration: none;
+  color: black;
+}
+.subtitle{
+  margin:0;
+}
+.main_img img{
+  width: 100%;
+  height: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.nav ul {
+list-style: none;
+background-color: white;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+.nav li {
+font-family: 'Oswald', sans-serif;
+font-size: 1.2em;
+line-height: 40px;
+text-align: left;
+}
+
+.nav a {
+text-decoration: none;
+color: brown;
+display: block;
+padding-left: 15px;
+border-bottom: 1px solid #888;
+transition: .7s background-color;
+}
+
+.nav a:hover {
+background-color: #FFFACD;
+}
+
+.nav a:active {
+background-color: #aaa;
+color: #444;
+cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+font-size: 0.8em;
+}
+.nav li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+}
+.nav li:hover ul {
+  display: block;
+}
+.sub_nav > a{
+  pointer-events: none;
+  cursor: default;
+}
+
+/*******************************************
+ Style menu for larger screens
+
+ Using 650px (130px each * 5 items), but ems
+ or other values could be used depending on other factors
+********************************************/
+
+@media screen and (min-width: 650px) {
+.nav li {
+  width: 130px;
+  border-bottom: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  display: inline-block;
+  margin-right: -4px;
+}
+
+.nav a {
+  border-bottom: none;
+}
+
+.nav > ul > li {
+  text-align: center;
+}
+
+.nav > ul > li > a {
+  padding-left: 0;
+}
+
+/* Sub Menus*/
+.nav li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+}
+
+.nav li:hover ul {
+  display: block;
+}
+
+.nav li ul li {
+  display: block;
+  color: brown;
+  text-align: center;
+}
+.nav li ul li a {
+  padding: 0;
+}
+}
