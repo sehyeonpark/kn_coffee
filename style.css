@@ -61,7 +61,7 @@ hgroup{
   height: 50%;
   padding-top: 35%;
 }
-.icon li:hover ul {
+.icon li:active ul {
   display: block;
 }
 .icon li li {
