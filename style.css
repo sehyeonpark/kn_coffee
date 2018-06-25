@@ -1,14 +1,18 @@
-/*.grid{
+body{
+  margin: 0;
+  padding: 0;
+}
+.grid{
   display: grid;
-  grid-template-columns: 150px 1fr;
-}*/
+  grid-template-columns: 1fr 150px;
+}
 hgroup{
   font-family: fantasy;
   text-align: center;
 }
 .title{
   font-size: 25px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 .title a{
@@ -16,7 +20,8 @@ hgroup{
   color: black;
 }
 .subtitle{
-  margin:0;
+  margin-bottom:20px;
+  margin-top: 0;
 }
 .main_img img{
   width: 100%;
@@ -24,6 +29,61 @@ hgroup{
   margin-left: auto;
   margin-right: auto;
   display: block;
+}
+/***************************************************
+***************************************************/
+.icon{
+  display: block;
+}
+#menu_close{
+  margin-top: -35%;
+  padding-bottom: 15%;
+}
+.icon i{
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 36px;
+}
+.icon ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #F0FFFF;
+  border-radius: 25px;
+}
+.icon li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+  margin-top: 15%;
+  width: 100%;
+  height: 50%;
+  padding-top: 35%;
+}
+.icon li:hover ul {
+  display: block;
+}
+.icon li li {
+font-size: 0.8em;
+height: 80px;
+}
+.icon li ul li {
+  display: block;
+  text-align: center;
+  top: 30%;
+}
+.icon a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-family: inherit;
+  font-size: 20px;
+}
+/**************************************************
+***************************************************/
+.nav{
+  display: none;
 }
 .nav ul {
 list-style: none;
@@ -80,10 +140,6 @@ font-size: 0.8em;
 .nav li:hover ul {
   display: block;
 }
-.sub_nav > a{
-  pointer-events: none;
-  cursor: default;
-}
 
 /*******************************************
 이달의메뉴
@@ -116,8 +172,25 @@ font-size: 0.8em;
 ********************************************/
 
 @media screen and (min-width: 650px) {
+.grid{
+  display: block;
+}
 .main_img img{
   height: 550px;
+}
+.title{
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.subtitle{
+  margin:0;
+}
+.icon{
+  display: none;
+}
+.nav{
+  display: block;
 }
 .nav li {
   width: 130px;
