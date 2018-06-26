@@ -1,0 +1,33 @@
+header{
+  border-bottom: 1px solid black;
+}
+.detail_menu{
+  text-align: center;
+}
+.detail_menu h4{
+  margin-top: 0;
+  margin-bottom: 10%;
+  padding-top: 5%;
+}
+img{
+  display: block;
+  width: 50%;
+  height: 125px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+.detail_list img{
+  margin-top: 10%;
+}
+.detail_list div{
+  margin-bottom: 15%;
+}
+.detail_list{
+  text-align: center;
+  font-family: cursive;
+}
+.detail_list span{
+  display: block;
+  margin-top: 5%;
+}
