@@ -1,6 +1,7 @@
 body{
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 .grid{
   display: grid;
@@ -31,7 +32,7 @@ hgroup{
   display: block;
 }
 /***************************************************
-***************************************************/
+
 .icon{
   display: block;
 }
@@ -79,6 +80,47 @@ height: 80px;
   display: block;
   font-family: inherit;
   font-size: 20px;
+}
+***************************************************/
+#hamburger { display: none; }
+#hamburger ~ * {
+  position: absolute;
+  transition: transform 0.4s;
+}
+#hamburger:checked ~ * { transform: translate3d(200px, 0, 0); }
+#hamburger ~ label {
+  font-size: 54px;
+  top: -16px; left: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+#hamburger ~ nav {
+  background: #F0FFFF;
+  width: 200px;
+  left: -200px;
+  height: 100%;
+}
+#hamburger ~ nav * {
+  margin: 0; padding: 0;
+  color: black;
+  text-align: center;
+}
+#hamburger ~ nav ul{
+  margin-top: 20%;
+}
+#hamburger ~ nav ul li{
+  margin-top: 10%;
+  margin-bottom: 15%;
+}
+#hamburger ~ nav span {
+  background: #eee;
+  padding: 1em;
+  display: block;
+}
+#hamburger ~ nav a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
 }
 /**************************************************
 ***************************************************/

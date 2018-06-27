@@ -5,117 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <style media="screen">
-
-.nav ul {
-list-style: none;
-background-color: #444;
-text-align: center;
-padding: 0;
-margin: 0;
+  <style>
+html, body { height: 100%; }
+body {
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
 }
 
-.nav li {
-font-family: 'Oswald', sans-serif;
-font-size: 1.2em;
-line-height: 40px;
-text-align: left;
-}
-
-.nav a {
-text-decoration: none;
-color: #fff;
-display: block;
-padding-left: 15px;
-border-bottom: 1px solid #888;
-transition: .3s background-color;
-}
-
-.nav a:hover {
-background-color: #005f5f;
-}
-
-.nav a.active {
-background-color: #aaa;
-color: #444;
-cursor: default;
-}
-
-/* Sub Menus */
-.nav li li {
-font-size: .8em;
-}
-
-/*******************************************
- Style menu for larger screens
-
- Using 650px (130px each * 5 items), but ems
- or other values could be used depending on other factors
-********************************************/
-
-@media screen and (min-width: 650px) {
-.nav li {
-  width: 130px;
-  border-bottom: none;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  display: inline-block;
-  margin-right: -4px;
-}
-
-.nav a {
-  border-bottom: none;
-}
-
-.nav > ul > li {
-  text-align: center;
-}
-
-.nav > ul > li > a {
-  padding-left: 0;
-}
-
-/* Sub Menus*/
-.nav li ul {
+#hamburger { display: none; }
+#hamburger ~ * {
   position: absolute;
-  display: none;
-  width: inherit;
+  transition: transform 0.4s;
 }
-
-.nav li:hover ul {
+#hamburger:checked ~ * { transform: translate3d(200px, 0, 0); }
+#hamburger ~ label {
+  font-size: 54px;
+  top: -16px; left: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+#hamburger ~ nav {
+  background: black;
+  width: 200px;
+  left: -200px;
+  height: 100%;
+}
+#hamburger ~ nav * {
+  margin: 0; padding: 0;
+  color: white;
+}
+#hamburger ~ nav header {
+  background: teal;
+  padding: 1em;
+}
+#hamburger ~ nav a {
   display: block;
+  text-decoration: none;
+  padding: 1em;
 }
+#hamburger ~ nav a:hover { background: gray; }
 
-.nav li ul li {
-  display: block;
+#content {
+  position: relative;
+  padding: 2.6em 1em 1em;
+  width: 100%;
+  background: silver;
 }
-}
-  </style>
+</style>
 </head>
 <body>
-  <header>
-  <div class="nav">
-    <ul>
-      <li class="home"><a href="#">Home</a></li>
-      <li class="tutorials"><a href="#">Tutorials</a>
-        <ul>
-          <li><a href="#">Tutorial #1@@</a></li>
-          <li><a href="#">Tutorial #2</a></li>
-          <li><a href="#">Tutorial #3</a></li>
-        </ul>
-      </li>
-      <li class="about"><a class="active" href="#">About</a></li>
-      <li class="news"><a href="#">Newsletter</a>
-        <ul>
-          <li><a href="#">News #1</a></li>
-          <li><a href="#">News #2@@@</a></li>
-          <li><a href="#">News #3</a></li>
-        </ul>
-      </li>
-      <li class="contact"><a href="#">Contact</a></li>
-    </ul>
-  </div>
-</header>
+  <input id="hamburger" type="checkbox" /><label for="hamburger">&equiv;</label>
+ <nav>
+   <header>메뉴</header>
+   <ul>
+     <li><a href="#">한놈</a></li>
+     <li><a href="#">두시기</a></li>
+     <li><a href="#">석삼</a></li>
+   </ul>
+ </nav>
+ <div id="content">
+   <h1>CSS 슬라이드 메뉴 예제</h1>
+   <p>우리나라의 말이 중국과 달라 문자가 서로 통하지 않는데 이런 이유로 어리석은 백성이 말하고자 하는 바가 있어도 마침내 제 뜻을 능히 펴지 못하는 사람이 많다. 내가 이를 불쌍히 여겨 새로 스물여덟 자를 만드니 사람마다 하여금 쉽게 익혀 매일 쓰기에 편안하게 하고자 할 따름이다.</p>
+ </div>
 </body>
 </html>
