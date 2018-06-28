@@ -1,0 +1,282 @@
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 150px;
+}
+hgroup{
+  font-family: fantasy;
+  text-align: center;
+}
+.title{
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.title a{
+  text-decoration: none;
+  color: black;
+}
+.subtitle{
+  margin-bottom:20px;
+  margin-top: 0;
+}
+.main_img img{
+  width: 100%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+/***************************************************
+
+.icon{
+  display: block;
+}
+#menu_close{
+  margin-top: -35%;
+  padding-bottom: 15%;
+}
+.icon i{
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 36px;
+}
+.icon ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #F0FFFF;
+  border-radius: 25px;
+}
+.icon li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+  margin-top: 15%;
+  width: 100%;
+  height: 50%;
+  padding-top: 35%;
+}
+.icon li:active ul {
+  display: block;
+}
+.icon li li {
+font-size: 0.8em;
+height: 80px;
+}
+.icon li ul li {
+  display: block;
+  text-align: center;
+  top: 30%;
+}
+.icon a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  font-family: inherit;
+  font-size: 20px;
+}
+***************************************************/
+#m_main_nav { display: none; }/*체크박스 숨기기*/
+#m_main_nav ~ * {  /*.icon 클래스 안에있는 체크박스 하위 모든 항목*/
+  position: absolute; /*요소가 절대위치로 배치된다.*/
+  transition: transform 0.4s;/*애니메이션이 변화하는 속도 설정*/
+}
+#m_main_nav:checked ~ * {/*체크박스를 누르면 하위 모든 항목*/
+  transform: translate3d(200px, 0, 0);
+}/*하위 항목을 가로200px만큼 이동시킨다*/
+
+#m_main_nav ~ label {/*체크박스와 연결된 라벨 선택*/
+  font-size: 54px;/*메뉴 아이콘 크기 설정*/
+  top: -16px; left: 8px;/*절대위치 값 설정*/
+  cursor: pointer;/*클릭 시 커서모양 설정*/
+  z-index: 1;/*요소의 겹쳐지는 순서 - 값이 높을수록 우선순위*/
+}
+#m_main_nav ~ nav {/*체크박스 하위의 nav태그 선택*/
+  background: #F0FFFF;/*배경색 설정*/
+  width: 200px;/*가로크기 설정*/
+  left: -200px;/*왼쪽배치 -200px 화면에서 안보이게 하기 위함*/
+  height: 100%;/*높이 화면의 100%*/
+}
+#m_main_nav ~ nav * {/*체크박스 하위 모든 nav의 하위요소 선택*/
+  margin: 0; padding: 0;
+  color: black;
+  text-align: center;
+}
+#m_main_nav ~ nav ul{/*체크박스 하위 모든 nav의 하위 ul 선택*/
+  list-style: none;
+}
+#m_main_nav ~ nav ul li{/*체크박스 하위 모든 nav의 하위 ul 의 하위 li 선택*/
+}
+#m_main_nav ~ nav span {
+  background: #eee;
+  padding: 1em;
+  display: block;
+}
+#m_main_nav ~ nav a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+}
+/**************************************************
+***************************************************/
+.nav{
+  display: none;
+}
+.nav ul {
+list-style: none;
+background-color: white;
+text-align: center;
+padding: 0;
+margin: 0;
+}
+
+.nav li {
+font-family: 'Oswald', sans-serif;
+font-size: 1.2em;
+line-height: 40px;
+text-align: left;
+}
+
+.nav a {
+text-decoration: none;
+color: brown;
+display: block;
+padding-left: 15px;
+border-bottom: 1px solid #888;
+transition: .7s background-color;
+}
+.nav span{
+  padding-left: 10px;
+  color: brown;
+  display: block;
+  transition: .7s background-color;
+}
+
+.nav a:hover {
+background-color: #FFFACD;
+}
+.nav span:hover {
+background-color: #FFFACD;
+}
+
+.nav a:active{
+background-color: #aaa;
+color: #444;
+cursor: default;
+}
+
+/* Sub Menus */
+.nav li li {
+font-size: 0.8em;
+}
+.nav li ul {
+  position: relative;
+  display: none;
+  width: inherit;
+}
+.nav li:hover ul {
+  display: block;
+}
+
+/*******************************************
+이달의메뉴
+*******************************************/
+.new_month_menu h4{
+  color: black;
+  font-family: Dotum;
+  font-size: 15px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.new_month_menu p{
+  margin: 0;
+}
+
+.new_month_menu img{
+  width: 100%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/*******************************************
+ Style menu for larger screens
+
+ Using 650px (130px each * 5 items), but ems
+ or other values could be used depending on other factors
+********************************************/
+
+@media screen and (min-width: 650px) {
+.grid{
+  display: block;
+}
+.main_img img{
+  height: 550px;
+}
+.title{
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.subtitle{
+  margin:0;
+}
+.icon{
+  display: none;
+}
+.nav{
+  display: block;
+}
+.nav li {
+  width: 130px;
+  border-bottom: none;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  display: inline-block;
+  margin-right: -4px;
+}
+
+.nav a{
+  border-bottom: none;
+}
+.nav span{
+  padding-left: 0;
+}
+
+.nav > ul > li {
+  text-align: center;
+}
+
+.nav > ul > li > a {
+  padding-left: 0;
+}
+
+/* Sub Menus*/
+.nav li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+}
+
+.nav li:hover ul {
+  display: block;
+}
+
+.nav li ul li {
+  display: block;
+  color: brown;
+  text-align: center;
+}
+.nav li ul li a {
+  padding: 0;
+}
+}
