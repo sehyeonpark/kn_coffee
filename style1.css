@@ -82,10 +82,6 @@ height: 80px;
   font-size: 20px;
 }
 ***************************************************/
-/*메인 슬라이드 메뉴*/
-.icon{
-  font-family: 'Montserrat','Noto Sans KR',AppleGothic,sans-serif;
-}
 #m_main_nav { display: none; }/*체크박스 숨기기*/
 #m_main_nav ~ * {  /*.icon 클래스 안에있는 체크박스 하위 모든 항목*/
   position: absolute; /*요소가 절대위치로 배치된다.*/
@@ -108,16 +104,19 @@ height: 80px;
   height: 100%;/*높이 화면의 100%*/
 }
 #m_main_nav ~ nav * {/*체크박스 하위 모든 nav의 하위요소 선택*/
+  margin: 0; padding: 0;
   color: black;
   text-align: center;
 }
 #m_main_nav ~ nav ul{/*체크박스 하위 모든 nav의 하위 ul 선택*/
+  margin-top: 20%;
   list-style: none;
-  padding: 0;
 }
 #m_main_nav ~ nav ul li{/*체크박스 하위 모든 nav의 하위 ul 의 하위 li 선택*/
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
-#m_main_nav ~ nav > span {
+#m_main_nav ~ nav span {
   background: #eee;
   padding: 1em;
   display: block;
@@ -128,7 +127,6 @@ height: 80px;
   padding: 1em;
 }
 /**************************************************
-슬라이드 메뉴 안 중메뉴
 ***************************************************/
 #m_nav_1,#m_nav_2,#m_nav_3{
   display: none;
@@ -153,7 +151,6 @@ height: 80px;
   margin-top: -12px;
 }
 /**************************************************
-pc버젼 메뉴
 ***************************************************/
 .nav{
   display: none;

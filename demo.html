@@ -7,56 +7,27 @@
   <title>Document</title>
   <link rel="stylesheet" href="style0.css">
   <style>
-    #m_nav_1{
+    #m_nav_1,#m_nav_2,#m_nav_3{
       display: none;
     }
-    #m_nav_1 ~ ul {
+    #m_nav_1 ~ ul,#m_nav_2 ~ ul,#m_nav_3 ~ ul {
       position: relative;
       display: none;
     }
-    #m_nav_1:checked ~ *{
+    #m_nav_1:checked ~ *,#m_nav_2:checked ~ *,#m_nav_3:checked ~ *{
       display:block;
-      margin-top: 0;
     }
-    #m_nav_1 ~ label{
+    #m_nav_1 ~ label,#m_nav_2 ~ label,#m_nav_3 ~ label{
       z-index: 2;
       font-size: 20px;
       display: block;
     }
-    #m_nav_2{
-      display: none;
-    }
-    #m_nav_2 ~ ul {
-      position: relative;
-      display: none;
-    }
-    #m_nav_2:checked ~ *{
-      display:block;
-      margin-top: 0;
-    }
-    #m_nav_2 ~ label{
-      z-index: 2;
-      font-size: 20px;
+    .m_nav span {
+      padding: 1em;
       display: block;
     }
-    #m_nav_3{
-      display: none;
-    }
-    #m_nav_3 ~ ul {
-      position: relative;
-      display: none;
-    }
-    #m_nav_3:checked ~ *{
-      display:block;
-      margin-top: 0;
-    }
-    #m_nav_3 ~ label{
-      z-index: 2;
-      font-size: 20px;
-      display: block;
-    }
-    .m_nav label{
-      height: 50px;
+    .m_nav ul{
+      margin-top: -12px;
     }
   </style>
 </head>
@@ -70,7 +41,7 @@
           <ul>
             <div class="m_nav">
             <li><input type="checkbox" id="m_nav_1"/>
-                <label for="m_nav_1">왕코커피</label>
+                <label for="m_nav_1"><span>왕코커피</span></label>
               <ul>
                 <li><a href="#">대표 소개</a></li>
                 <li><a href="#">왕코커피 소개</a></li>
@@ -80,7 +51,7 @@
             </div>
             <div class="m_nav">
             <li><input type="checkbox" id="m_nav_2"/>
-                <label for="m_nav_2">메뉴</label>
+                <label for="m_nav_2"><span>메뉴</span></label>
               <ul>
                 <li><a href="coffee.html">커피</a></li>
                 <li><a href="juice.html">음료</a></li>
@@ -91,7 +62,7 @@
             </div>
             <div class="m_nav">
             <li><input type="checkbox" id="m_nav_3"/>
-                <label for="m_nav_3">커뮤니티</label>
+                <label for="m_nav_3"><span>커뮤니티</span></label>
               <ul>
                 <li><a href="#">공지사항</a></li>
                 <li><a href="#">이벤트</a></li>

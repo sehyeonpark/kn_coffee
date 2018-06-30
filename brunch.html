@@ -11,32 +11,72 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="menudetail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  #m_nav_nav_brunch{
+    background-color: yellow;
+    font-weight: bold;
+  }
+  </style>
 </head>
 <body>
   <header>
-      <div class="grid">
-        <div class="icon">
-          <input type="checkbox" id="hamburger"/>
-          <label for="hamburger">&equiv;</label>
-            <nav>
-              <span>메뉴</span>
-              <ul>
-                <li><a href="menus.html">Menus</a></li>
-                <li><a href="ourshops.html">OurShops</a></li>
-                <li><a href="buycoffee.html">BuyCoffee</a></li>
-              </ul>
-            </nav>
-        </div>
-      <hgroup>
-        <p class="title"><a href="index.html">KN_Cafe</a></p>
-        <p class="subtitle"><small>CoffeeHouse</small></p>
-      </hgroup>
-    </div>
-</header>
-<div class="body">
-  <div class="detail_menu">
-    <h4>Brunch Menu</h4>
+    <div class="grid">
+      <div class="icon">
+        <input type="checkbox" id="m_main_nav"/>
+        <label for="m_main_nav">&equiv;</label>
+          <nav>
+            <span>메뉴</span>
+            <ul>
+              <div class="m_nav">
+              <li><input type="checkbox" id="m_nav_1"/>
+                  <label for="m_nav_1"><span>왕코커피</span></label>
+                <ul>
+                  <li><a href="#">대표 소개</a></li>
+                  <li><a href="#">왕코커피 소개</a></li>
+                  <li><a href="#">원두 소개</a></li>
+                </ul>
+              </li>
+              </div>
+              <div class="m_nav">
+              <li><input type="checkbox" id="m_nav_2"/>
+                  <label for="m_nav_2"><span>메뉴</span></label>
+                <ul>
+                  <li><a href="coffee.html">커피</a></li>
+                  <li><a href="juice.html">음료</a></li>
+                  <li><a href="dessert.html">디저트</a></li>
+                  <li><a href="brunch.html">브런치</a></li>
+                </ul>
+              </li>
+              </div>
+              <div class="m_nav">
+              <li><input type="checkbox" id="m_nav_3"/>
+                  <label for="m_nav_3"><span>커뮤니티</span></label>
+                <ul>
+                  <li><a href="#">공지사항</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+              </div>
+            </ul>
+          </nav>
+      </div>
+    <hgroup>
+      <p class="title"><a href="index.html">KN_Cafe</a></p>
+      <p class="subtitle"><small>CoffeeHouse</small></p>
+    </hgroup>
   </div>
+</header>
+<div class="m_nav_nav">
+  <h1>Brunch</h1>
+  <p>신선한 재료를 사용한 브런치 메뉴입니다.</p>
+  <ul>
+    <li><a href="coffee.html">Coffee</a></li>
+    <li><a href="juice.html">Juice</a></li>
+    <li><a href="dessert.html">Dessert</a></li>
+    <li id="m_nav_nav_brunch"><a href="brunch.html">Brunch</a></li>
+  </ul>
+</div>
+<div class="body">
   <div class="detail_list">
     <div>
       <img src="IMG/brunch.jpg" alt="americano">

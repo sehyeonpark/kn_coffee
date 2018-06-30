@@ -31,3 +31,33 @@ img{
   display: block;
   margin-top: 5%;
 }
+/************************************************************
+메뉴 안 네비게이션
+************************************************************/
+.m_nav_nav *{
+  margin: 0;
+}
+.m_nav_nav{
+    background-color: #FFFAF0;
+    text-align: center;
+    padding: 20px 10px;
+}
+.m_nav_nav p{
+  padding: 1em;
+}
+.m_nav_nav ul{
+  list-style: none;
+  padding: 0;
+  border: 1px solid #bfbfbf;
+  border-bottom: none;
+  background-color: white;
+}
+.m_nav_nav ul li{
+  padding: 0.8em;
+  border-bottom: 1px solid #bfbfbf;
+}
+.m_nav_nav a{
+  text-decoration: none;
+  color: black;
+  display: block;
+}
